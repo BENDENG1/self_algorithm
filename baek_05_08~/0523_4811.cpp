@@ -7,33 +7,35 @@
 점화식 arr[i][j] = arr[i-1][j] + arr[i][j-1];
 */
 
-// #include <iostream>
+/*
+#include <iostream>
 
-// using namespace std;
-// int t;
-// long long arr[31] = {1, 1, 2, 5,14};
+using namespace std;
+int t;
+long long arr[31] = {1, 1, 2, 5,14};
 
-// int main()
-// {
-//     ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+int main()
+{
+    ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
-//     for (int i = 5; i <= 30; i++)
-//     {
-//         for (int j = 0; j < i; j++)
-//         {
-//             arr[i] += arr[j] * arr[i - j - 1];
-//         }
-//     }
+    for (int i = 5; i <= 30; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            arr[i] += arr[j] * arr[i - j - 1];
+        }
+    }
 
-//     while (1)
-//     {
-//         cin >> t;
-//         if (t == 0)
-//             break;
-//         else
-//             cout << arr[t] << "\n";
-//     }
-// }
+    while (1)
+    {
+        cin >> t;
+        if (t == 0)
+            break;
+        else
+            cout << arr[t] << "\n";
+    }
+}
+*/
 
 #include <iostream>
 
