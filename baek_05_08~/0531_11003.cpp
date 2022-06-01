@@ -38,7 +38,6 @@ int main()
 #include <queue>
 #include <deque>
 #include <vector>
-
 using namespace std;
 int n,l,index,tmp,first;
 deque<int> dq;
@@ -48,7 +47,6 @@ priority_queue<int,vector<int>,greater<int>>pq;
 int main()
 {
     ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);
-
     cin>>n>>l;
     for(int i = 0;i<n;i++)
     {
