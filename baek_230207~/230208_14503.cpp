@@ -62,7 +62,7 @@ void dfs(int y, int x, int direction)
 		int ny = y + dy[ndirection];
 		int nx = x + dx[ndirection];
 
-		if (ny >= 0 && ny < n && nx >= 0 && nx < m && arr[ny][nx] == 0 )
+		if (ny >= 0 && ny < n && nx >= 0 && nx < m && arr[ny][nx] == 0)
 		{
 			if (visited[ny][nx] == 0)
 			{
