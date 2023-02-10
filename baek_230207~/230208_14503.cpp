@@ -12,7 +12,7 @@
 
 조건에서 그러면 잘못 놓는 경우는? x -> 그냥 그건 상관 안해도 됨
 
-근데 북동남서 이거 3에서 0으로 가는거 귀찮은데 더 추가하는거는? -> +3 하고 빼고 나머지하면?
+근데 북동남서 이거 3에서 0으로 가는거 귀찮은데 더 추가하는거는? -> +7 하고 빼고 나머지하면?
 */
 
 #include <iostream>
@@ -58,7 +58,7 @@ void dfs(int y, int x, int direction)
 	//cout<<y<<" y    "<<x<<" x   "<<"\n";
 	for (int i = 0; i < 4; i++)
 	{
-		int ndirection = (direction + 3 - i) % 4;
+		int ndirection = (direction + 7 - i) % 4;
 		int ny = y + dy[ndirection];
 		int nx = x + dx[ndirection];
 
@@ -66,8 +66,8 @@ void dfs(int y, int x, int direction)
 		{
 			if (visited[ny][nx] == 0)
 			{
-				cout<<"newdirection : "<<ndirection<<"  cnt : "<<cnt<<"   ";
-				cout<<ny<<" " <<nx<<" "<<"\n";
+				//cout<<"newdirection : "<<ndirection<<"  cnt : "<<cnt<<"   ";
+				//cout<<ny<<" " <<nx<<" "<<"\n";
 				visited[ny][nx] = 1;
 				cnt++;
 				dfs(ny, nx, ndirection);
@@ -87,11 +87,13 @@ void dfs(int y, int x, int direction)
 	int y_back = y + dy[direction_back];
 	int x_back = x + dx[direction_back];
 
-	if(0 < y_back && 0 < x_back && y_back < n && x_back < m){
+	if(0 <= y_back && 0 <= x_back && y_back <= n && x_back <= m){
 		if(arr[y_back][x_back] == 0){
 			dfs(y_back,x_back,direction);
 		}
-		else
-			return;
+		else{
+			cout<<cnt<<"\n";
+			exit(0);
+		}
 	}
 }
