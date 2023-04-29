@@ -5,6 +5,7 @@
 		"cstdlib": "cpp",
 		"ios": "cpp",
 		"iostream": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"vector": "cpp"
 	}
 }
