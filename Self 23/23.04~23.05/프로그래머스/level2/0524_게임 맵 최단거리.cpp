@@ -24,7 +24,6 @@ int solution(vector<vector<int>> maps)
     visited[0][0] = 1;
     
     while(!q.empty()){
-        
         //흔한 bfs방법으로 y,x를 뽑아내고 pop
         int y = q.front().first;
         int x = q.front().second;
