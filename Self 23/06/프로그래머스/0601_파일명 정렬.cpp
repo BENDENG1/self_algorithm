@@ -22,7 +22,6 @@ head -> number순이고 둘다 같으면 주어진 시간순.
 
 using namespace std;
 
-
 struct Dict {
     string head;
     string number;
@@ -40,7 +39,6 @@ bool compareDicts(const Dict& a, const Dict& b) {
     int numA = stoi(a.number);
     int numB = stoi(b.number);
 
-    
     //비교시에만 소문자로 비교를 하고 원래의 값을 리턴해야함
     for (char& c : strA) {
         c = tolower(c);
@@ -48,7 +46,6 @@ bool compareDicts(const Dict& a, const Dict& b) {
     for (char& c : strB) {
         c = tolower(c);
     }
-    
     
     //정렬의 순서에 대해서 다 넣음
     if (strA == strB) {
@@ -61,7 +58,6 @@ bool compareDicts(const Dict& a, const Dict& b) {
         return strA < strB;  // head순
     }
 }
-
 
 vector<string> solution(vector<string> files) {
     vector<string> answer;
