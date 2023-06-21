@@ -1,13 +1,3 @@
-/*
-달리기 경주
-
-결국 플레이어의 위치를 찾아서 한칸 앞으로 스왑을 하면 된다는거
-
-모두 소문자이고 중복값은 필요x 현재 1등인 선수는 불리지 않음
-
-callings에서 불리는 이름을 찾는다 -> players의 이름이 있는 인덱스와 인덱스 -1을 스왑한다.
-
-*/
 #include <string>
 #include <vector>
 #include <algorithm>
