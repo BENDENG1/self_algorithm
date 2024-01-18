@@ -5,7 +5,7 @@
 
 n*m -> 놓인칸에 쓰여있는 수들의 합을 최대로 하는 프로그램
 
-회전이나 대칭이 가능하고 
+회전이나 대칭이 가능함
 */
 #include <iostream>
 #include <vector>
@@ -36,7 +36,9 @@ int main()
 
     for(int i = 0 ; i < n;i++){
         for(int j = 0;j<m;j++){
-
+            visited[i][j] = true;
+            dfs()
+            visited[i][j] = false;
         }
     }
 }
