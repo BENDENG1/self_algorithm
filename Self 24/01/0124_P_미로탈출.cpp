@@ -4,40 +4,10 @@
 이렇게 말고 
 시작지점 -> 레버 bfs 최단거리
 레버 -> 출구 bfs 최단거리 
-를 구해서 두개 다 구해질 수 있다면 횟수 return 아니면 -1 리턴 식으로 하는게 나을 듯 ㅇㅇ
+를 구해서 두개 다 구해질 수 있다면 횟수 return 아니면 -1 리턴 식으로 하는게 나을 듯 
+
+아니 그냥 생각해보니 for문에서 break만 하면 되잖아? 위에꺼 다시 기각
 */
-// #include <string>
-// #include <vector>
-
-// using namespace std;
-
-
-// int solution(vector<string> maps) {
-//     int answer = 0;
-//     pair<int, int> startPoint;
-//     pair<int, int> leverPoint;
-//     pair<int, int> exitPoint;
-    
-//     for(int i = 0 ; i < maps.size();i++){
-//         for(int j = 0; j < maps[i].length();j++){
-//             if(maps[i][j] == 'S'){
-//                 startPoint = {i,j};
-//             }else if(maps[i][j] == 'L'){
-//                 leverPoint = {i,j};
-//             }else if(maps[i][j] == 'X'){
-//                 exitPoint = {i,j};
-//             }
-//         }
-//     }
-    
-//     return answer;
-// }
-
-// int bfs(pair<int, int> s, char e, vector<string>& maps){
-    
-// }
-
-
 #include <string>
 #include <vector>
 #include <queue>
@@ -94,6 +64,7 @@ int solution(vector<string> maps) {
                     q.push(make_tuple(ny,nx,cnt+1));
                     resetVisited();
                     visited[ny][nx] = true;
+                    break;
                 }else{
                     //탈출조건 만족
                     if(maps[ny][nx] == 'E' && isLever){
